@@ -72,7 +72,7 @@
           // Defer the ready handler calling to ensure that the editor is
           // completely ready and populated with data.
           setImmediate(function () {
-            $parse(attrs.ready)(scope);
+            $parse(attrs.ready)(scope, {$instance: controller.instance});
           });
         });
 
